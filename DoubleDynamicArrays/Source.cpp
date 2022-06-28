@@ -1,4 +1,4 @@
-#include<iostream>;
+ï»¿#include<iostream>;
 using namespace std;
 
 int** Allocate(const int rows, const int cols);
@@ -24,51 +24,51 @@ void main()
 	setlocale(LC_ALL, "Russian");
 	int rows;
 	int cols;
-	cout << "ââåäèòå êîëè÷åñòâî ñòðîê: "; cin >> rows;
-	cout << "Ââåäèòå êîëè÷åñòâî ýëåìåíòîâ ñòðîêè: "; cin >> cols;
-	cout << "Íàø äâóìåðíûé ìàññèâ: " << endl;
+	cout << "Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÑ‚Ñ€Ð¾Ðº: "; cin >> rows;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² ÑÑ‚Ñ€Ð¾ÐºÐ¸: "; cin >> cols;
+	cout << "ÐÐ°Ñˆ Ð´Ð²ÑƒÐ¼ÐµÑ€Ð½Ñ‹Ð¹ Ð¼Ð°ÑÑÐ¸Ð²: " << endl;
 	int** arr = Allocate(rows, cols);
 	FillRand(arr, rows, cols);
 	Print(arr, rows, cols);
-	cout << "Íàø ìàññèâ ñ äîáàâëåíèåì ñòðîêè â êîíåö ìàññèâà: " << endl;
+	cout << "ÐÐ°Ñˆ Ð¼Ð°ÑÑÐ¸Ð² Ñ Ð´Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ð¸ÐµÐ¼ ÑÑ‚Ñ€Ð¾ÐºÐ¸ Ð² ÐºÐ¾Ð½ÐµÑ† Ð¼Ð°ÑÑÐ¸Ð²Ð°: " << endl;
 	arr = push_row_down(arr, rows, cols);
 	Print(arr, rows, cols);
-	cout << "Íàø ìàññèâ ñ äîáàâëåíèåì ñòðîêè â íà÷àëî ìàññèâà: " << endl;
+	cout << "ÐÐ°Ñˆ Ð¼Ð°ÑÑÐ¸Ð² Ñ Ð´Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ð¸ÐµÐ¼ ÑÑ‚Ñ€Ð¾ÐºÐ¸ Ð² Ð½Ð°Ñ‡Ð°Ð»Ð¾ Ð¼Ð°ÑÑÐ¸Ð²Ð°: " << endl;
 	arr = push_row_ap(arr, rows, cols);
 	Print(arr, rows, cols);
 	int index;
-	cout << "Ââåäèòå çíà÷åíèå èíäåêñà ïî êîòîðîìó áóäåò äîáàâëåíà ñòðîêà â ìàññèâ: "; cin >> index;
-	cout << "Íàø ìàññèâ ñ äîáàâëåíèåì ñòðîêè ïî èíäåêñó: " << endl;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð¸Ð½Ð´ÐµÐºÑÐ° Ð¿Ð¾ ÐºÐ¾Ñ‚Ð¾Ñ€Ð¾Ð¼Ñƒ Ð±ÑƒÐ´ÐµÑ‚ Ð´Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ð° ÑÑ‚Ñ€Ð¾ÐºÐ° Ð² Ð¼Ð°ÑÑÐ¸Ð²: "; cin >> index;
+	cout << "ÐÐ°Ñˆ Ð¼Ð°ÑÑÐ¸Ð² Ñ Ð´Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ð¸ÐµÐ¼ ÑÑ‚Ñ€Ð¾ÐºÐ¸ Ð¿Ð¾ Ð¸Ð½Ð´ÐµÐºÑÑƒ: " << endl;
 	arr = insert_row(arr, rows, cols, index);
 	Print(arr, rows, cols);
-	cout << "Íàø ìàññèâ ñ äîáàâëåíèåì ñòîáöà â êîíåö ìàññèâà: " << endl;
+	cout << "ÐÐ°Ñˆ Ð¼Ð°ÑÑÐ¸Ð² Ñ Ð´Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ð¸ÐµÐ¼ ÑÑ‚Ð¾Ð±Ñ†Ð° Ð² ÐºÐ¾Ð½ÐµÑ† Ð¼Ð°ÑÑÐ¸Ð²Ð°: " << endl;
 	push_col_right(arr, rows, cols);
 	Print(arr, rows, cols);
-	cout << "Íàø ìàññèâ ñ äîáàâëåíèåì ñòîëáöà â íà÷àëî ìàññèâà: " << endl;
+	cout << "ÐÐ°Ñˆ Ð¼Ð°ÑÑÐ¸Ð² Ñ Ð´Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ð¸ÐµÐ¼ ÑÑ‚Ð¾Ð»Ð±Ñ†Ð° Ð² Ð½Ð°Ñ‡Ð°Ð»Ð¾ Ð¼Ð°ÑÑÐ¸Ð²Ð°: " << endl;
 	push_col_left(arr, rows, cols);
 	Print(arr, rows, cols);
-	cout << "Íàø ìàññèâ ñ óäàëåíèåì ïîñëåäíåé ñòðîêè: " << endl;
+	cout << "ÐÐ°Ñˆ Ð¼Ð°ÑÑÐ¸Ð² Ñ ÑƒÐ´Ð°Ð»ÐµÐ½Ð¸ÐµÐ¼ Ð¿Ð¾ÑÐ»ÐµÐ´Ð½ÐµÐ¹ ÑÑ‚Ñ€Ð¾ÐºÐ¸: " << endl;
 	arr = pop_row_down(arr, rows, cols);
 	Print(arr, rows, cols);
-	cout << "Íàø ìàññèâ ñ óäàëåíèåì ïåðâîé ñòðîêè: " << endl;
+	cout << "ÐÐ°Ñˆ Ð¼Ð°ÑÑÐ¸Ð² Ñ ÑƒÐ´Ð°Ð»ÐµÐ½Ð¸ÐµÐ¼ Ð¿ÐµÑ€Ð²Ð¾Ð¹ ÑÑ‚Ñ€Ð¾ÐºÐ¸: " << endl;
 	arr = pop_row_up(arr, rows, cols);
 	Print(arr, rows, cols);
-	cout << "Ââåäèòå èíäåêñ äëÿ óäàëåíèÿ ñòðîêè ìàññèâà ïî èíäåêñó: "; cin >> index;
-	cout << "Íàø ìàññèâ ñ óäàëåíèåì ñòðîêè ïî èíäåêñó: " << endl;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð½Ð´ÐµÐºÑ Ð´Ð»Ñ ÑƒÐ´Ð°Ð»ÐµÐ½Ð¸Ñ ÑÑ‚Ñ€Ð¾ÐºÐ¸ Ð¼Ð°ÑÑÐ¸Ð²Ð° Ð¿Ð¾ Ð¸Ð½Ð´ÐµÐºÑÑƒ: "; cin >> index;
+	cout << "ÐÐ°Ñˆ Ð¼Ð°ÑÑÐ¸Ð² Ñ ÑƒÐ´Ð°Ð»ÐµÐ½Ð¸ÐµÐ¼ ÑÑ‚Ñ€Ð¾ÐºÐ¸ Ð¿Ð¾ Ð¸Ð½Ð´ÐµÐºÑÑƒ: " << endl;
 	arr = erase_row(arr, rows, cols, index);
 	Print(arr, rows, cols);
-	cout << "Íàø ìàññèâ ñ óäàëåíèåì ïîñëåäíåãî ñòîëáöà â ìàññèâå: " << endl;
+	cout << "ÐÐ°Ñˆ Ð¼Ð°ÑÑÐ¸Ð² Ñ ÑƒÐ´Ð°Ð»ÐµÐ½Ð¸ÐµÐ¼ Ð¿Ð¾ÑÐ»ÐµÐ´Ð½ÐµÐ³Ð¾ ÑÑ‚Ð¾Ð»Ð±Ñ†Ð° Ð² Ð¼Ð°ÑÑÐ¸Ð²Ðµ: " << endl;
 	pop_col_right(arr, rows, cols);
 	Print(arr, rows, cols);
-	cout << "Íàø Ìàññèâ ñ óäàëåíèåì ïåðâîãî ñòîëáöà ìàññèâà: " << endl;
+	cout << "ÐÐ°Ñˆ ÐœÐ°ÑÑÐ¸Ð² Ñ ÑƒÐ´Ð°Ð»ÐµÐ½Ð¸ÐµÐ¼ Ð¿ÐµÑ€Ð²Ð¾Ð³Ð¾ ÑÑ‚Ð¾Ð»Ð±Ñ†Ð° Ð¼Ð°ÑÑÐ¸Ð²Ð°: " << endl;
 	pop_col_left(arr, rows, cols);
 	Print(arr, rows, cols);
-	cout << "Ââåäèòå çíà÷åíèå èíäåêñà ïî êîòîðîìó äîáàâèòüñÿ ñòîëáåö â íàø ìàññèâ: "; cin >> index;
-	cout << "Íàø Ìàññèâ ñ äîáàâëåíèåì ñòîëáöà ïî èíäåêñó:" << endl;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð¸Ð½Ð´ÐµÐºÑÐ° Ð¿Ð¾ ÐºÐ¾Ñ‚Ð¾Ñ€Ð¾Ð¼Ñƒ Ð´Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒÑÑ ÑÑ‚Ð¾Ð»Ð±ÐµÑ† Ð² Ð½Ð°Ñˆ Ð¼Ð°ÑÑÐ¸Ð²: "; cin >> index;
+	cout << "ÐÐ°Ñˆ ÐœÐ°ÑÑÐ¸Ð² Ñ Ð´Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ð¸ÐµÐ¼ ÑÑ‚Ð¾Ð»Ð±Ñ†Ð° Ð¿Ð¾ Ð¸Ð½Ð´ÐµÐºÑÑƒ:" << endl;
 	insert_col(arr, rows, cols, index);
 	Print(arr, rows, cols);
-	cout << "Ââåäèòå çíà÷åíèå èíäåêñà ïî êîòîðîìó óäàëèòñÿ ñòîëáåö â íàøåì ìàññèâå: "; cin >> index;
-	cout << "Íàø ìàññèâ ñ óäàëåíèåì ñòîëáöà ïî èíäåêñó: " << endl;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð¸Ð½Ð´ÐµÐºÑÐ° Ð¿Ð¾ ÐºÐ¾Ñ‚Ð¾Ñ€Ð¾Ð¼Ñƒ ÑƒÐ´Ð°Ð»Ð¸Ñ‚ÑÑ ÑÑ‚Ð¾Ð»Ð±ÐµÑ† Ð² Ð½Ð°ÑˆÐµÐ¼ Ð¼Ð°ÑÑÐ¸Ð²Ðµ: "; cin >> index;
+	cout << "ÐÐ°Ñˆ Ð¼Ð°ÑÑÐ¸Ð² Ñ ÑƒÐ´Ð°Ð»ÐµÐ½Ð¸ÐµÐ¼ ÑÑ‚Ð¾Ð»Ð±Ñ†Ð° Ð¿Ð¾ Ð¸Ð½Ð´ÐµÐºÑÑƒ: " << endl;
 	erase_col(arr, rows, cols, index);
 	Print(arr, rows, cols);
 	Clear(arr, rows);
@@ -270,13 +270,13 @@ void insert_col(int** arr, const int rows, int& cols, int& index)
 		int* buffer = new int[cols + 1]{};
 		for (int j = 0; j < index; j++)
 		{
-			buffer[index] = arr[i][j];
+			buffer[j] = arr[i][j];
 		}
 		for (int j = index; j < cols; j++)
 		{
 			buffer[j + 1] = arr[i][j];
 		}
-		delete[] arr[i];
+		//delete[] arr[i];
 		arr[i] = buffer;
 	}
 	cols++;
@@ -289,12 +289,12 @@ void erase_col(int** arr, const int rows, int& cols, int& index)
 		int* buffer = new int[cols - 1]{};
 		for (int j = 0; j < index; j++)
 		{
-			buffer[i] = arr[i][j];
+			buffer[j] = arr[i][j];
 		}
 
 		for (int j = index; j < cols - 1; j++)
 		{
-			buffer[j + 1] = arr[i][j];
+			buffer[j] = arr[i][j + 1];
 		}
 		delete[] arr[i];
 		arr[i] = buffer;
